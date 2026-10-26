@@ -1,32 +1,13 @@
-# Daily Focus
+# Daily Focus — web oficial
 
-Web oficial de Daily Focus: portada, soporte, privacidad y solicitud de eliminación de cuenta.
+Versión web de Daily Focus Play 9.0.45: 15 idiomas, 60 páginas y 150 capturas auténticas de una cuenta de demostración, sin correos visibles. Nuevo logo en cabecera, favicon y metadatos sociales.
 
-## Contenido
+## Publicación
 
-- index.html: portada de la aplicación.
-- privacy.html: política de privacidad.
-- delete-account.html: recurso público para solicitar la eliminación de cuenta.
-- support.html: soporte y contacto.
-- styles.css: diseño responsive, claro y accesible.
-- .github/workflows/pages.yml: despliegue automático en GitHub Pages.
+La fuente de publicación vigente es `dailyfocus-site-9045.zip`, que contiene la web estática completa y sus imágenes optimizadas. El workflow `.github/workflows/pages.yml` verifica su SHA-256, extrae el contenido en `_site`, comprueba las 60 páginas y 150 imágenes y publica esa carpeta en GitHub Pages. Los HTML y assets antiguos que permanecen fuera del paquete son históricos y no se despliegan.
 
-## Activar GitHub Pages
+URL: https://davidmontes1978.github.io/dailyfocus/
 
-1. Abre Settings del repositorio.
-2. Entra en Pages.
-3. En Build and deployment, selecciona GitHub Actions.
-4. Espera a que termine el workflow Deploy Daily Focus website.
-5. La web quedará publicada en https://davidmontes1978.github.io/dailyfocus/.
+Se mantienen `privacy.html`, `support.html` y `delete-account.html`, además de sus versiones traducidas. Árabe y hebreo usan dirección RTL. Las capturas húngaras usan la corrección autorizada de tres formatos de fecha; los otros catorce idiomas usan el APK original. Los textos escritos por el usuario en la cuenta demo conservan su idioma original.
 
-## URLs para Google Play
-
-- Política de privacidad: https://davidmontes1978.github.io/dailyfocus/privacy.html
-- Solicitud de eliminación: https://davidmontes1978.github.io/dailyfocus/delete-account.html
-- Soporte: https://davidmontes1978.github.io/dailyfocus/support.html
-
-La eliminación directa desde la aplicación sigue siendo la vía principal. La página pública incluye también una solicitud por correo para las personas que no puedan acceder a la aplicación.
-
-## Desarrollo
-
-No hay build ni dependencias de pago. Es una web estática HTML/CSS/JavaScript compatible con GitHub Pages.
+La revisión jurídica final, la revisión lingüística profesional y la auditoría integral del backend no forman parte de esta validación.
