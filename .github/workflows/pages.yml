@@ -19,12 +19,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Verify and unpack validated website
+        run: |
+          echo "56919cc1034cddf48a3bea96b87fb4fc15c956fbf24402ade781513231172be1  dailyfocus-site-9045.zip" | sha256sum --check
+          unzip -q dailyfocus-site-9045.zip -d _site
+          test -f _site/index.html
+          test -f _site/privacy.html
+          test -f _site/delete-account.html
+          test "$(find _site -name '*.html' | wc -l)" -eq 60
+          test "$(find _site/assets/screenshots -name '*.webp' | wc -l)" -eq 150
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
